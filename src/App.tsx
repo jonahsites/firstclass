@@ -6,29 +6,31 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Live Inventory", type: "page" },
-  { name: "Our Process", href: "#about" },
+  { name: "The Fleet", type: "page" },
+  { name: "Rental Process", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Investment", href: "#" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const faqItems = [
-  { q: "How are prices determined?", a: "Prices are set based on current market valuation and bank liquidation requirements. All vehicles are priced to move quickly." },
-  { q: "Can I inspect the vehicle before purchase?", a: "Yes. We encourage 3rd party inspections. Please contact us to coordinate a visit to our secure facility." },
-  { q: "Do you offer financing?", a: "We work with several automotive lenders specializing in high-end assets. You can also use your own financial institution." },
-  { q: "What documents are required for purchase?", a: "You will need a valid government ID, proof of funds or financing approval, and a signed purchase agreement." },
-  { q: "Do you handle the title transfer?", a: "Yes, our documentation team handles all title transfers and registration paperwork for a seamless transaction." },
-  { q: "Is shipping available?", a: "We offer secure, enclosed transportation nationwide. International shipping can also be coordinated." },
-  { q: "Are these vehicles under warranty?", a: "Most vehicles still carry their manufacturer's warranty. Supplemental extended warranties are also available." },
-  { q: "What is the return policy?", a: "Due to the liquidated nature of these assets, all sales are final once the transaction is completed." },
+  { q: "How do I book a rental?", a: "You can book directly via our Instagram DM, a phone call, or by visiting our Texas facility. We offer a seamless reservation process." },
+  { q: "What are your rental rates?", a: "We offer competitive Daily, Weekly, and Monthly rates tailored to each vehicle. Rates vary by model and duration." },
+  { q: "What is required for a rental?", a: "A valid driver's license, proof of insurance, and a security deposit are required for all rentals. Age requirements apply for certain high-performance vehicles." },
+  { q: "Do you offer delivery?", a: "Yes, we provide concierge delivery and pickup services throughout Texas for our premium clientele." },
+  { q: "Are there mileage limits?", a: "Our daily rates include a standard mileage allowance. Additional mileage can be purchased if you plan on a longer journey." },
+  { q: "Can I use the car for a photo shoot?", a: "Absolutely. We offer specialized rates for production, photo shoots, and private events." },
+  { q: "Is insurance included?", a: "Renters must provide their own full coverage insurance that extends to exotic rentals. We can assist in verifying your policy." },
+  { q: "What is the security deposit?", a: "Security deposits reflect the value of the asset and are fully refundable upon return of the vehicle in original condition." },
 ];
 
 const specs = [
-  { val: "240+", label: "Units Available" },
-  { val: "Tier 1", label: "Asset Grade" },
-  { val: "MIAMI", label: "Primary Hub" },
-  { val: "100%", label: "Verified Stats" },
+  { val: "50+", label: "Elite Vehicles" },
+  { val: "DAILY", label: "Starting Rate" },
+  { val: "TEXAS", label: "Primary Hub" },
+  { val: "Verified", label: "Service Grade" },
 ];
+
+const LOGO_URL = "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-19/467704321_1170982767972335_2481163755230444879_n.jpg?cb=8438d1d6-89aba764&efg=eyJ2ZW5jb2Rl_agI6InByb2ZpbGVfcGljLmRqYW5nby44NDQuYzIifQ&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gEK05KVMvIUM102WJXMSXJfnaCZdZabPBs2iM9BpMcOa0KVi15uVIBiYnPugvHHYImXT2rMaAfvpcolARfuTTzy&_nc_ohc=YYC_Ogp__68Q7kNvwG_xs1R&_nc_gid=lECKGo7Ua1rR-Y5-O9-6Dg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af7EUp1KWxdoPb28w-iIePe_UlJ-fmjhA9AACinN86pHLg&oe=69F9BF61&_nc_sid=7a9f4b";
 
 export default function App() {
   const [showInventory, setShowInventory] = useState(false);
@@ -49,7 +51,10 @@ export default function App() {
 
       {/* Floating HUD Navigation */}
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-100 flex items-center gap-6 px-10 py-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-full pointer-events-auto">
-        <span className="text-xs font-bold uppercase tracking-widest text-white border-r border-white/10 pr-6 mr-2">Bank Cars For Sale</span>
+        <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
+          <img src={LOGO_URL} className="w-8 h-8 rounded-full" alt="Logo" referrerPolicy="no-referrer" />
+          <span className="text-xs font-bold uppercase tracking-widest text-white">First Class</span>
+        </div>
         <div className="flex items-center gap-6">
           {navLinks.map((link) => (
             <a
@@ -89,20 +94,20 @@ export default function App() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Vehicle Liquidation</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Exotic Rental Fleet</span>
               </div>
               <h1 className="text-7xl md:text-9xl lg:text-[120px] font-bold leading-[0.9] uppercase tracking-tight mb-12">
-                Pure <br/> 
-                Inventory.
+                First <br/> 
+                Class.
               </h1>
               <div className="grid grid-cols-2 gap-12 max-w-md border-t border-white/10 pt-12">
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3 font-semibold">Our Source</p>
-                  <p className="text-sm font-normal leading-relaxed text-white/60">Direct inventory from financial liquidations and private collections.</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3 font-semibold">Our Location</p>
+                  <p className="text-sm font-normal leading-relaxed text-white/60">Premium exotic and luxury car rentals serving all of Texas.</p>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3 font-semibold">Service</p>
-                  <p className="text-sm font-normal leading-relaxed text-white/60">Professional acquisition and nationwide transportation.</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3 font-semibold">Booking</p>
+                  <p className="text-sm font-normal leading-relaxed text-white/60">Daily, weekly, and monthly rates available upon request.</p>
                 </div>
               </div>
             </motion.div>
@@ -124,8 +129,8 @@ export default function App() {
               <div className="absolute inset-0 bg-black/20" />
               
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-3xl font-bold tracking-tight">BANK STOCK</p>
-                <p className="text-[10px] uppercase tracking-widest text-white/60 font-medium">Direct Acquisition Only</p>
+                <p className="text-3xl font-bold tracking-tight">ELITE RENTALS</p>
+                <p className="text-[10px] uppercase tracking-widest text-white/60 font-medium">Texas Most Exclusive Fleet</p>
               </div>
             </motion.div>
           </div>
@@ -152,12 +157,12 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-24">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-bold uppercase tracking-[0.43em] text-white/40 mb-6 block">Our Capabilities</span>
-              <h2 className="text-6xl md:text-8xl font-bold tracking-tight uppercase leading-[0.85]">Professional <br/> Services.</h2>
+              <span className="text-[10px] font-bold uppercase tracking-[0.43em] text-white/40 mb-6 block">Our Fleet</span>
+              <h2 className="text-6xl md:text-8xl font-bold tracking-tight uppercase leading-[0.85]">Luxury <br/> Rentals.</h2>
             </div>
             <div className="flex flex-col items-end text-right">
               <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-8 uppercase tracking-widest">
-                Verification / Logistics / Procurement
+                Exotic / Luxury / Performance
               </p>
             </div>
           </div>
@@ -172,8 +177,8 @@ export default function App() {
               <img src="https://static.wixstatic.com/media/dfb3c4_c0a36ab317df453aa2e9e293710567a1~mv2.jpg" className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-standard grayscale group-hover:grayscale-0" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent h-full" />
               <div className="absolute bottom-12 left-12">
-                <h3 className="text-3xl font-bold mb-4 uppercase">Direct Inspections</h3>
-                <p className="text-white/40 text-sm max-w-xs uppercase tracking-widest leading-loose font-medium">Detailed visual and mechanical documentation for every asset.</p>
+                <h3 className="text-3xl font-bold mb-4 uppercase">VIP Concierge</h3>
+                <p className="text-white/40 text-sm max-w-xs uppercase tracking-widest leading-loose font-medium">Door-to-door delivery and 24/7 dedicated support for our clients.</p>
               </div>
             </motion.div>
 
@@ -184,10 +189,10 @@ export default function App() {
               className="md:col-span-4 group bg-white p-12 rounded-lg flex flex-col justify-between hover:bg-neutral-100 transition-colors cursor-pointer"
             >
               <div className="text-black">
-                <h3 className="text-4xl font-bold mb-6 uppercase">Asset Access</h3>
+                <h3 className="text-4xl font-bold mb-6 uppercase">Daily Rates</h3>
               </div>
               <div className="flex flex-col gap-6">
-                <p className="text-black/60 text-xs uppercase tracking-[0.1em] leading-relaxed font-bold">Simplified acquisition process with direct financial institution links.</p>
+                <p className="text-black/60 text-xs uppercase tracking-[0.1em] leading-relaxed font-bold">Flexible short-term and long-term rental options for any occasion.</p>
                 <ArrowUpRight size={48} className="text-black/20 group-hover:text-black transition-all transform group-hover:translate-x-2 group-hover:-translate-y-2" />
               </div>
             </motion.div>
@@ -203,8 +208,8 @@ export default function App() {
                   <Phone size={20} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2 uppercase">Direct Support</h4>
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest leading-relaxed">Personal concierge for all liquidation transactions.</p>
+                  <h4 className="text-lg font-bold mb-2 uppercase">Book Now</h4>
+                  <p className="text-white/40 text-[10px] uppercase tracking-widest leading-relaxed">Call or DM us for current rates and availability.</p>
                 </div>
               </div>
             </motion.div>
@@ -217,10 +222,10 @@ export default function App() {
             >
               <div className="flex flex-col md:flex-row gap-12 items-center w-full">
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold mb-4 uppercase">Direct logistics</h3>
-                  <p className="text-white/40 text-sm uppercase tracking-widest leading-loose">Secure, enclosed transportation and title handling nationwide.</p>
+                  <h3 className="text-3xl font-bold mb-4 uppercase">Weekly & Monthly</h3>
+                  <p className="text-white/40 text-sm uppercase tracking-widest leading-loose">Extended rental terms with preferential rates for long-term clients.</p>
                 </div>
-                <button className="px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shrink-0 rounded-full">Contact Team</button>
+                <button className="px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shrink-0 rounded-full">Inquire Rates</button>
               </div>
             </motion.div>
           </div>
@@ -235,23 +240,23 @@ export default function App() {
               <div className="flex items-center gap-6 mb-12">
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Our Mission</span>
               </div>
-              <h2 className="text-7xl md:text-9xl font-bold tracking-tight uppercase leading-[0.85] mb-12">Direct <br/> <span className="text-outline">Access.</span></h2>
+              <h2 className="text-7xl md:text-9xl font-bold tracking-tight uppercase leading-[0.85] mb-12">Total <br/> <span className="text-outline">Luxury.</span></h2>
               <div className="space-y-8 text-white/60 text-lg leading-relaxed font-normal">
                 <p>
-                  Bank Cars For Sale simplifies the acquisition of high-end automotive assets. We bridge the gap between financial institutions and the public.
+                  First Class Rentals defines the pinnacle of automotive experience in Texas. We curate the world's most desirable vehicles for those who demand nothing less than perfection.
                 </p>
                 <p className="text-base text-white/40 uppercase tracking-widest font-medium">
-                  We specialize in the liquidation of luxury and exotic vehicles, offering a transparent, efficient sales process based on real market value.
+                  Whether for a special event, business travel, or professional production, our fleet delivers unparalleled prestige and performance.
                 </p>
               </div>
               <div className="mt-16 grid grid-cols-2 gap-12 border-t border-white/10 pt-16">
                 <div>
-                  <p className="text-5xl font-bold mb-2">04</p>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">State Coverage</p>
+                  <p className="text-5xl font-bold mb-2">TX</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Statewide Delivery</p>
                 </div>
                 <div>
-                  <p className="text-5xl font-bold mb-2">100%</p>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Verification</p>
+                  <p className="text-5xl font-bold mb-2">24/7</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Support</p>
                 </div>
               </div>
             </div>
@@ -271,12 +276,15 @@ export default function App() {
       <footer id="contact" className="relative z-20 bg-luxury-black border-t border-white/10 px-10 pt-40 pb-20 md:px-16 text-white/60 text-xs">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-32">
           <div className="col-span-1 lg:col-span-1">
-            <div className="mb-12">
-              <span className="text-xl font-bold tracking-tight text-white uppercase leading-none block">Bank Cars</span>
-              <span className="text-[10px] tracking-widest text-white/40 font-bold uppercase mt-2 block">For Sale</span>
+            <div className="mb-12 flex items-center gap-4">
+              <img src={LOGO_URL} className="w-12 h-12 rounded-full" alt="Logo" referrerPolicy="no-referrer" />
+              <div>
+                <span className="text-xl font-bold tracking-tight text-white uppercase leading-none block">First Class</span>
+                <span className="text-[10px] tracking-widest text-white/40 font-bold uppercase mt-2 block">Rentals</span>
+              </div>
             </div>
             <p className="max-w-xs leading-relaxed uppercase tracking-widest font-semibold">
-              Premium automotive liquidation services. Direct access to financial assets.
+              Premium Exotic & Luxury Car Rentals. Serving the state of Texas with the ultimate driving experience.
             </p>
           </div>
 
@@ -290,12 +298,12 @@ export default function App() {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-widest mb-12 text-white">Locations</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-widest mb-12 text-white">Coverage</h4>
             <div className="flex flex-col gap-6 uppercase tracking-widest font-semibold">
-              <p>Miami, FL</p>
-              <p>Tampa, FL</p>
-              <p>Orlando, FL</p>
-              <p>New York, NY</p>
+              <p>Houston, TX</p>
+              <p>Dallas, TX</p>
+              <p>Austin, TX</p>
+              <p>San Antonio, TX</p>
             </div>
           </div>
 
@@ -308,7 +316,7 @@ export default function App() {
         </div>
 
         <div className="max-w-[1400px] mx-auto border-t border-white/10 pt-10 flex justify-between items-center">
-          <p className="text-[10px] tracking-widest uppercase font-semibold">© 2025 Bank Cars For Sale. All Rights Reserved.</p>
+          <p className="text-[10px] tracking-widest uppercase font-semibold">© 2025 First Class Rentals. All Rights Reserved.</p>
           <div className="hidden md:flex gap-10 font-semibold uppercase tracking-widest">
             {["Terms", "Privacy"].map(link => (
               <a key={link} href="#" className="text-[10px] hover:text-white transition-colors uppercase">{link}</a>

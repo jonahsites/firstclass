@@ -32,26 +32,26 @@ const modelData = [
 
 const sections = [
   {
-    label: "Asset 01 — Direct Liquidation",
+    label: "Elite 01 — Available Today",
     title: "Lamborghini\nUrus SE",
-    desc: "Pristine performance SUV acquired through institutional liquidation. 800 CV hybrid powertrain with full service documentation.",
-    tags: ["Verified Asset", "Institutional Source", "Tax Advantage"],
+    desc: "Experience the ultimate performance SUV. Combining extreme sportiness with daily usability, now available for short-term and long-term rental.",
+    tags: ["Daily Rates", "Concierge Delivery", "Full Specs"],
     color: "#050505",
     accent: "#FFFFFF"
   },
   {
-    label: "Asset 02 — High-Value Asset",
+    label: "Elite 02 — High-Performance",
     title: "BMW\nM4 Competition",
-    desc: "Aggressive M-series engineering held as high-grade collateral. Surgical handling and raw power, ready for immediate acquisition.",
-    tags: ["Rapid Sale", "Zero Liens", "Title Clear"],
+    desc: "Uncompromising M-series engineering. Precision handling and explosive power, ready to elevate your Texas business or leisure travel.",
+    tags: ["Weekly Specials", "Texas Pickup", "Unlimited Fun"],
     color: "#050505",
     accent: "#FFFFFF"
   },
   {
-    label: "Asset 03 — Performance Grade",
+    label: "Elite 03 — Pinnacle Grade",
     title: "McLaren\n570S Coupe",
-    desc: "Carbon-fiber supercar liquidation. A mid-mounted V8 masterpiece representing the pinnacle of driver-focused financial assets.",
-    tags: ["Low Mileage", "Buy-Now Pricing", "Inspection Ready"],
+    desc: "The purest supercar experience. A mid-mounted V8 masterpiece offering unmatched thrills on the open Texas roads.",
+    tags: ["Daily Rental", "VIP Support", "Pure Vision"],
     color: "#050505",
     accent: "#FFFFFF"
   }

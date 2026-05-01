@@ -55,9 +55,9 @@ const Inventory: React.FC<InventoryProps> = ({ onClose }) => {
         {/* Header */}
         <div className="flex justify-between items-start mb-20">
           <div>
-            <div className="text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold mb-4">Current Vehicle Inventory</div>
+            <div className="text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold mb-4">Elite Fleet Status</div>
             <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none">
-              Direct <span className="text-white/20 text-outline">Sales</span> <br/> Available Stock.
+              Exotic <span className="text-white/20 text-outline">Rentals</span> <br/> Available Today.
             </h2>
           </div>
           <button 
@@ -118,7 +118,7 @@ const Inventory: React.FC<InventoryProps> = ({ onClose }) => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-sm">
-                    <span className="text-[10px] font-bold text-white">${car.price.toLocaleString()}</span>
+                    <span className="text-[10px] font-bold text-white">${car.price.toLocaleString()}/DAY</span>
                   </div>
                 </div>
 
@@ -128,11 +128,11 @@ const Inventory: React.FC<InventoryProps> = ({ onClose }) => {
                   <h3 className="text-xl font-bold uppercase tracking-tighter mb-6 group-hover:text-white transition-colors">{car.name}</h3>
                   <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-6">
                     <div>
-                      <div className="text-[9px] uppercase text-white/20 tracking-widest mb-1">Asset Grade</div>
-                      <div className="text-sm font-bold tracking-tighter">PREMIUM</div>
+                      <div className="text-[9px] uppercase text-white/20 tracking-widest mb-1">Status</div>
+                      <div className="text-sm font-bold tracking-tighter">READY</div>
                     </div>
                     <div>
-                      <div className="text-[9px] uppercase text-white/20 tracking-widest mb-1">Specs</div>
+                      <div className="text-[9px] uppercase text-white/20 tracking-widest mb-1">Power</div>
                       <div className="text-sm font-bold tracking-tighter">{car.hp} HP</div>
                     </div>
                   </div>
